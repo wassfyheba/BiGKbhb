@@ -6,11 +6,11 @@ A deep learning framework for predicting lysine β-hydroxybutyrylation (Kbhb) mo
 BiGKbhb is a computational tool that identifies Kbhb modification sites across multiple species with high accuracy. The model combines evolutionary-based BLOSUM62 encoding with a BiGRU neural network architecture to achieve superior performance compared to existing predictors.
 Key Features
 
-# High Accuracy: Test set accuracies of 0.824 (human), 0.832 (mouse), and 0.871 (fungal)
-# Multi-Species Support: Pre-trained models for human, mouse, and fungal proteins
-# Cross-Species Prediction: General model enables prediction across diverse organisms
-# BLOSUM62 Encoding: Evolutionary-based sequence representation for optimal performance
-# Easy to Use: Simple Python interface for predictions
+High Accuracy: Test set accuracies of 0.824 (human), 0.832 (mouse), and 0.871 (fungal)
+Multi-Species Support: Pre-trained models for human, mouse, and fungal proteins
+Cross-Species Prediction: General model enables prediction across diverse organisms
+BLOSUM62 Encoding: Evolutionary-based sequence representation for optimal performance
+Easy to Use: Simple Python interface for predictions
 
 # Installation Prerequisites
 Python 3.8 or higher
@@ -54,23 +54,6 @@ sequences = [
 
 batch_predictions = model.predict_batch(sequences)
 Model Architecture
-BiGKbhb employs a carefully optimized deep learning architecture:
-
-# Input Layer: BLOSUM62-encoded peptide sequences (41 × 20 matrix)
-# Batch Normalization: Stabilizes training and improves convergence
-# BiGRU Layer: 192 units with ReLU activation, captures bidirectional context
-# Dropout: 0.5 rate for regularization
-# Global Max Pooling: Extracts salient features
-# Output Layer: Sigmoid activation for binary classification
-
-# Key Hyperparameters
-
-Window size: 41 residues (±20 flanking positions)
-BiGRU units: 192
-Dropout rate: 0.5
-Learning rate: 0.001
-Optimizer: Adam
-Loss function: Binary cross-entropy
 
 # Dataset
 The model was trained and evaluated on experimentally validated Kbhb sites from three species:
