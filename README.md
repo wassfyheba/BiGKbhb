@@ -36,7 +36,7 @@ Quick Start
 Basic Usage
 pythonfrom bigkbhb import BiGKbhb
 
-# Initialize the model (choose from 'human', 'mouse', 'fungal', or 'general')
+Initialize the model (choose from 'human', 'mouse', 'fungal', or 'general')
 model = BiGKbhb(model_type='general')
 
 # Predict Kbhb sites for a protein sequence
